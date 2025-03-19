@@ -1,0 +1,120 @@
+[
+    {
+        "name": "Amadu Village",
+        "district": "Bopulu",
+        "warring_faction": "NPFL",
+        "coordinates": [-10.69662, 6.932429999999999]
+    },
+    {
+        "name": "Bamboo Town Massacre",
+        "district": "Bopulu",
+        "warring_faction": "AFL",
+        "coordinates": [-10.544865, 6.956054999999999]
+    },
+    {
+        "name": "Carpeh Yard Bopolu City",
+        "district": "Bopulu",
+        "warring_faction": "NPFL",
+        "coordinates": [-10.484623333333332, 7.068943333333334]
+    },
+    {
+        "name": "Compound-Su Junction",
+        "district": "Bopulu",
+        "warring_faction": "ULIMO-J",
+        "coordinates": [-10.546879999999998, 6.9355866666666675]
+    },
+    {
+        "name": "David Kolleh Village, Wayarma Town",
+        "district": "Bopulu",
+        "warring_faction": "ULIMO-J",
+        "coordinates": [-10.546879999999998, 6.9355866666666675]
+    },
+    {
+        "name": "Dukuly Quarter, Medina",
+        "district": "Bopulu",
+        "warring_faction": "LURD",
+        "coordinates": [-10.514361666666666, 7.039481666666668]
+    },
+    {
+        "name": "Farsuta",
+        "district": "Bopulu",
+        "warring_faction": "ULIMO-K",
+        "coordinates": [-10.520618333333335,7.075581666666666]
+    },
+    {
+        "name": "Flat Rock, Sumo Kerkulah Village",
+        "district": "Bopulu",
+        "warring_faction": "LURD",
+        "coordinates": [-10.477500000000001, 7.060456666666666]
+    },
+    {
+        "name": "Gbarqoita Massacre",
+        "district": "Bopulu",
+        "warring_faction": "ULIMO-K",
+        "coordinates": [-10.514561666666669, 7.114073333333333]
+    },
+    {
+        "name": "Guyata Hill",
+        "district": "Bopulu",
+        "warring_faction": "ULIMO-K",
+        "coordinates": [-10.543501666666668, 7.093441666666666]
+    },
+    {
+        "name": "Jallah Lone Town Bodeisu",
+        "district": "Bopulu",
+        "warring_faction": "NPFL",
+        "coordinates": [-10.691818333333334, 6.928458333333333]
+    },
+    {
+        "name": "Kinis Town (village), Compound-Su",
+        "district": "Bopulu",
+        "warring_faction": "ULIMO-K",
+        "coordinates":[-10.547220000000001, 6.935803333333332]
+    },
+    {
+        "name": "Konneh-la Town, Dead village",
+        "district": "Kamala",
+        "warring_faction": "ULIMO-K",
+        "coordinates": [-10.579701666666665, 6.899964999999999]
+    },
+    {
+        "name": "Marvo Bridge, Bopolu City",
+        "district": "Bopulu",
+        "warring_faction": "NPFL",
+        "coordinates": [-10.485918333333332, 7.0667816666666665]
+    },
+    {
+        "name": "Nyeama Town",
+        "district": "Bopulu",
+        "warring_faction": "NPFL",
+        "coordinates": [-10.527943333333333, 7.028383333333333]
+    },
+    {
+        "name": "Tumukola Town",
+        "district": "Bokomu",
+        "warring_faction": "LURD",
+        "coordinates": [-10.623434999999999, 6.992854999999999]
+    },
+    {
+        "name": "Siryonla Quarter, Medina, Town",
+        "district": "Bopulu",
+        "warring_faction": "LURD",
+        "coordinates": [-10.4902126, 7.068943333333334]
+    },
+    {
+        "name": "Underwear Town valley",
+        "district": "Bopulu",
+        "warring_faction": "NPFL",
+        "coordinates": [-10.484623333333332, 7.068943333333334]
+    },
+    {
+        "name": "Zebra Hole Bopulu City",
+        "district": "Bopolu",
+        "warring_faction": "NPFL",
+        "coordinates": [-10.496493333333335, 7.062401666666667]
+    },
+    {
+        
+    }
+
+]

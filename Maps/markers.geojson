@@ -1,0 +1,1777 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Amadu Village",
+          "district": "Bopulu",
+          "warring_faction": "NPFL",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.69662, 6.932429999999999]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Bamboo Town Massacre",
+          "district": "Bopolu",
+          "warring_faction": "AFL",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.544865, 6.956054999999999]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Carpeh Yard Bopolu City",
+          "district": "Bopulu",
+          "warring_faction": "NPFL",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.484623333333332, 7.068943333333334]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Compound-Su Junction",
+          "district": "Bopulu",
+          "warring_faction": "ULIMO-J",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.546879999999998, 6.9355866666666675]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "David Kolleh Village, Wayarma Town",
+          "district": "Bopulu",
+          "warring_faction": "ULIMO-J",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.546879999999998, 6.9355866666666675]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Dukuly Quarter, Medina",
+          "district": "Bopulu",
+          "warring_faction": "LURD",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.514361666666666, 7.039481666666668]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Farsuta",
+          "district": "Bopulu",
+          "warring_faction": "ULIMO-K",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.520618333333335, 7.075581666666666]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Flat Rock, Sumo Kerkulah Village",
+          "district": "Bopulu",
+          "warring_faction": "LURD",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.477500000000001, 7.060456666666666]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Gbarqoita Massacre",
+          "district": "Bopulu",
+          "warring_faction": "ULIMO-K",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.514561666666669, 7.114073333333333]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Zebra Hole Bopulu City",
+          "district": "Bopolu",
+          "warring_faction": "NPFL",
+          "county": "Gbarpolu"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.496493333333335, 7.062401666666667]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Guyata Hill",
+          "district": "Bopolu",
+          "warring_faction": "ULIMO-K",
+          "county": "Bomi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates":[-10.543501666666668, 7.093441666666666]
+      }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Jallah Lone Town Bodeisu",
+          "district": "Bopolu",
+          "warring_faction": "NPFL",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates": [-10.691818333333334, 6.928458333333333]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Kinis Town (village), Compound-Su",
+          "district": "Bopolu",
+          "warring_faction": "ULIMO-K",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates":[-10.579701666666665, 6.935803333333332]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Konneh-la Town, Dead village",
+          "district": "Kamala",
+          "warring_faction": "LURD",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates":[-10.579701666666665, 6.899964999999999] 
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Marvo Bridge, Bopulu City",
+          "district": "Bopolu",
+          "warring_faction": "NPFL",
+          "county": "Bomi"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.485918333333332, 7.0667816666666665]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Nyeama Town",
+          "district": "Bopolu",
+          "warring_faction": "NPFL",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates":[-10.527943333333333, 7.028383333333333]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Tumukola Town",
+          "district": "Bopolu",
+          "warring_faction": "LURD",
+          "county": "Bomi"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates":[-10.623434999999999, 6.992854999999999]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Siryonla Quarter, Medina, Town",
+          "district": "Bokomu",
+          "warring_faction": "LURD",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates": [-10.4902126, 7.0666513]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Underwear Town Valley",
+          "district": "Bopolu",
+          "warring_faction": "NPFL",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates": [-10.484623333333332, 7.068943333333334]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Big Gabeh",
+          "district": "Suehn Mecca",
+          "warring_faction": "NPFL",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates": [-10.609713654071202, 6.794453856123789]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Coleman Hill",
+          "district":"Senjeh",
+          "warring_faction": "ULIMO-K",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates": [-10.828539999999998, 6.810479999999999]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "DC CLarke",
+          "district": "Suehn Mecca",
+          "warring_faction": "ULIMO",
+          "county": "Bomi"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.715203584636244, 6.810479999999999]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Dog Creak (Tubmanburg City)",
+          "district": "Senjeh",
+          "warring_faction": "ULIMO",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates": [-10.818786666666664, 6.874823333333334]
+        }
+      },
+      {
+        "type":"Feature",
+        "properties":{
+          "name": "Fefeh Town",
+          "district": "Klay",
+          "warring_faction": "NPFL",
+          "county": "Bomi"
+        },
+        "geometry": {
+          "type":"Point",
+          "coordinates":[-10.740384177759077, 6.651362971813729]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties":{
+          "name": "Government Farm",
+          "district": "Klay",
+          "warring_faction": "ULIMO",
+          "county": "Bomi"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates":[-10.861707283333333, 6.734166200000001]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Guie Town",
+          "district": "Klay",
+          "warring_faction": "ULIMO-J",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates": [-10.849759583333332, 6.758409033333334]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Mala Gate (Tubmanburg City)",
+          "district": "Senjeh",
+          "warring_faction": "ULIMO-J",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates":[-10.817396666666665, 6.859746666666666]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Mannah Gbokai",
+          "district": "Klay",
+          "warring_faction": "NPFL",
+          "county": "Bomi"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.806597383333333, 6.777495166666667]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Married Camp",
+          "district": "Senjeh",
+          "warring_faction": "LURD",
+          "county": "Bomi"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates":[-10.946161666666667, 6.7423399999999996]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Nakai Garage (Tubmanburg City)",
+          "district": "Senjeh",
+          "warring_faction": "NPFL",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates":[-10.817081666666665, 6.878268333333334]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Suehn Mission",
+          "district": "Suehn Mecca",
+          "warring_faction": "ULIMO",
+          "county": "Bomi"
+        },
+        "geometry":{
+          "type": "Point",
+          "coordinates": [-10.706953366597704, 6.617920729176944]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Welcome Gate (Tubmanburg City)",
+          "district": "Senjeh",
+          "warring_faction": "ULIMO",
+          "county": "Bomi"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.827106666666669, 6.880130000000001]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Zordee",
+          "district": "Klay",
+          "warring_faction": "NPFL",
+          "county": "Bomi" 
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-10.782828917823226, 6.676045631567356]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Yuandee Valley",
+          "district": "Klay",
+          "warring_faction": "NPFL",
+          "county": "Bomi"
+        },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.699185, 6.760081666666667]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Sumo Camp",
+            "district": "Senjeh",
+            "warring_faction": "ULIMO-K",
+            "county": "Bomi"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.909421666666667, 6.7483233333333335]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Quaissa town",
+            "district": "Suehn Mecca",
+            "warring_faction": "ULIMO",
+            "county": "Bomi"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.609688337110262, 6.794481981235743]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gogehn",
+            "district": "Klay",
+            "warring_faction": "ULIMO-J",
+            "county": "Bomi"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.734538333333335,6.734165]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "LPMC BONE HILL MASSACRE SITE",
+            "district": "Gbarnzue Town, Jorquelleh 1",
+            "warring_faction": "NPFL",
+            "county": "Bong"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates":[-9.504, 6.998275]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gbarnzu Massacre Site",
+            "district": "Bong",
+            "warring_faction": "ULIMO",
+            "county": "Bong"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.48938, 7.000791666666667]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "David Town Massacre site 1994",
+            "district": "David Town, Jorquelleh District",
+            "warring_faction": "NPFL",
+            "county": "Bong"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.503458333333333, 6.957091666666668]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "David Town Massacre site 1990",
+            "district": "David Town, Jorquelleh District",
+            "warring_faction": "INPFL",
+            "county": "Bong"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.503243333333334, 6.959781666666667]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Baila Massacre site",
+            "district": "Kpaai District",
+            "warring_faction": "NPFL",
+            "county": "Bong"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.168051666666665, 7.061249999999999]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Big Joe Massacre Site 1",
+            "district": "Big Town Statutory district 3",
+            "warring_faction": "NPFL",
+            "county": "Grand Bassa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.976771666666668, 5.8961966666666665]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Rock Hill Massacre Site",
+            "district": "Rock Hill Town, statutory district 3",
+            "warring_faction": "NPFL",
+            "county": "Grand Bassa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.976368333333333, 5.887785000000001]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bohn Town massacred site",
+            "district": "Bohn/Glacon Admin",
+            "warring_faction": "NPFL",
+            "county": "Grand Bassa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.738498333333332, 6.599059999999999]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Trodain Town",
+            "district": "District #4",
+            "warring_faction": "NPFL",
+            "county": "Grand Bassa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.742155, 5.962176666666666]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Palm Farm massacre site, Compound",
+            "district": "District #2",
+            "warring_faction": "LPC",
+            "county": "Grand Bassa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.911176666666668, 6.220503333333332]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Civil Compound",
+            "district": "District #2",
+            "warring_faction": "LPC",
+            "county": "Grand Bassa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.914235, 6.215733333333333]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+          "name": "Juu Town",
+          "district": "River Cess",
+          "warring_faction": "LPC",
+          "county": "River Cess "
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.472883333333334, 5.922898333333334]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Borbor Town Massacre Site",
+            "district": "River Cess",
+            "warring_faction": "LPC",
+            "county": "River Cess"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.636788333333334, 5.572236666666667]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Wrowrue Town",
+            "district": "River Cess",
+            "warring_faction": "LPC",
+            "county": "River Cess"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates":[-9.55187, 5.5502159]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Peonwlor",
+            "district": "River Cess",
+            "warring_faction": "NPFL",
+            "county": "River Cess"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.5529549, 5.5461432]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Barblozohn massacred site",
+            "district": "River Cess",
+            "warring_faction": "NPFL",
+            "county": "River Cess"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.5605817, 5.5117834]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gbewokon massacred site",
+            "district": "River Cess",
+            "warring_faction": "NPFL",
+            "county": "River Cess"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.5735861, 5.923978]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Chio Town Massacre",
+            "district": "River Cess",
+            "warring_faction": "LPC",
+            "county": "River Cess"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.621166666666666, 5.678953333333334]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Whea Massacre Site",
+            "district": "River Cess",
+            "warring_faction": "LPC",
+            "county": "River Cess"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.636840000000001, 5.623856666666668]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Nydamoilahun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.4452647, 8.9590937]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Solvasu",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.0382314, 8.3479807]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Ngihema",
+            "district": "Kolahun",
+            "warring_faction": "LURD",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.139935, 8.2696841]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Svalahun",
+            "district": "Kolahun",
+            "warring_faction": "NPFL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1489093, 8.3336871]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Mbabahun",
+            "district": "Kolahun",
+            "warring_faction": "LPC",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1309495, 8.290065]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Toingehwa",
+            "district": "Kolahun",
+            "warring_faction": "NPFL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1406124, 8.2756187]
+          }
+        },
+        {
+          "type":"Feature",
+          "properties": {
+            "name": "Koworhun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.6593439, 8.3550321]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Sosomalahun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1475441, 8.261846]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bolahun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1580856, 8.2335822]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Porlowu",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1914933, 8.216275]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Lehuima",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1725759, 8.1733112]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gbowohun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1447754, 8.1700638]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gbelahun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.2417117, 8.1087056]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Lukasu",
+            "district": "Kolahun",
+            "warring_faction": "LURD",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.2749041, 8.0206629]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Porluma",
+            "district": "Foya",
+            "warring_faction": "ULIMO",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1138942, 8.4298964]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kpandiloe",
+            "district": "Foya",
+            "warring_faction": "ULIMO-K",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1700182, 8.3374631]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Jomata",
+            "district": "Foya",
+            "warring_faction": "LURD",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1459166, 8.4121316]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Sarmodu",
+            "district": "Voinjama",
+            "warring_faction": "NPFL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.6593439, 8.3550321]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bolonguidu",
+            "district": "Voinjama",
+            "warring_faction": "GOL",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.6625308, 8.4879936]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Danenama",
+            "district": "Salayea",
+            "warring_faction": "LURD",
+            "date": "2003",        
+            "casualties": "213",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.497, 7.6156]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Passama",
+            "district": "Salayea",
+            "warring_faction": "LURD",
+            "date": "2003",        
+            "casualties": "112",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.5675, 7.4564]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Yeala",
+            "district": "Zorzor",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "86",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.4025, 7.82583]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Worzi",
+            "district": "Zorzor",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "86",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.4025, 7.82583]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Worzi",
+            "district": "Zorzor",
+            "warring_faction": "LDF",
+            "date": "1993",        
+            "casualties": "75",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.55722, 7.83361]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Balagwaluzu",
+            "district": "Zorzor",
+            "warring_faction": "LDF",
+            "date": "1993",        
+            "casualties": "100",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.43028, 7.77944]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bakedu",
+            "district": "Voinjama",
+            "warring_faction": "NPFL",
+            "date": "1990",        
+            "casualties": "387",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.43028, 7.77944]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kuruka",
+            "district": "Voinjama",
+            "warring_faction": "NPFL",
+            "date": "1990",        
+            "casualties": "387",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.720615, 8.448941]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Selega",
+            "district": "Voinjama",
+            "warring_faction": "NPFL",
+            "date": "1991",        
+            "casualties": "47",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.718335, 8.408933]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Malamai",
+            "district": "Voinjama",
+            "warring_faction": "NPFL",
+            "date": "1993",        
+            "casualties": "142",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.758799, 8.403788]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Tenebu",
+            "district": "Voinjama",
+            "warring_faction": "LDF",
+            "date": "1993",        
+            "casualties": "86",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.772789, 8.308204]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Lawalazu",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "55",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.842442, 8.445033]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Lawalazu",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "55",
+            "county": "Lofa" 
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.842442, 8.445033]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Jallamai",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "47",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.971584, 8.362164]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kpotomai",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "40",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.5714, 8.1315]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Zowodamai",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "37",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.942863, 8.327376]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kpankpalamai",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "11",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.4324, 8.1128]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Vezela",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "25",
+            "county": "Lofa"     
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.4324, 8.3128]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kpakumai",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "20",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.69167, 8.27389]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Jaryamai",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO",
+            "date": "1993",        
+            "casualties": "60",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.69167, 8.37389]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Nekebuzu",
+            "district": "Voinjama",
+            "warring_faction": "GOL",
+            "date": "1993",        
+            "casualties": "27",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.69167, 8.153]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Nekebuzu",
+            "district": "Voinjama",
+            "warring_faction": "NPP",
+            "date": "2003",        
+            "casualties": "27",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.69165, 8.153]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Voinjama City",
+            "district": "Voinjama",
+            "warring_faction": "ULIMO-K",
+            "date": "1993",        
+            "casualties": "750",
+            "county": "Lofa"      
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.751550, 8.421819]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kolba City",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "date": "2003",
+            "casualties": "550",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.08748, 8.291050]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kailahun-Luka",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "date": "2002",
+            "casualties": "800",
+            "county": "Lofa"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.26817, 8.01612]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Yandihun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "date": "2002",
+            "casualties": "100"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.4323, 8.1128]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Yandihun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "date": "2002",
+            "casualties": "100"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.4323, 8.1128]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Popolahun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "date": "2002",
+            "casualties": "100"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.1345, 8.1044]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Fangnoda",
+            "district": "Kolahun",
+            "warring_faction": "ULIMO",
+            "date": "1993",
+            "casualties": "36"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.2345, 8.1044]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kamatahun",
+            "district": "Kolahun",
+            "warring_faction": "GOL",
+            "date": "2002",
+            "casualties": "147"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.29601, 8.13646]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kambolahun",
+            "district": "Kolahun",
+            "warring_faction": "ULIMO",
+            "date": "2002",
+            "casualties": "300"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.05714, 8.34239]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Foya City",
+            "district": "Foya",
+            "warring_faction": "ULIMO",
+            "date": "1993",
+            "casualties": "45"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.20904, 8.35908]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Nigesakonja",
+            "district": "Foya",
+            "warring_faction": "NPFL",
+            "date": "27",
+            "casualties": "45"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.176286, 8.336228]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Folima",
+            "district": "Vahun",
+            "warring_faction": "ULIMO",
+            "date": "1993",
+            "casualties": "130"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.57099, 8.12434]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gogoma",
+            "district": "Vahun",
+            "warring_faction": "ULIMO",
+            "date": "1993",
+            "casualties": "75"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.24786, 8.23688]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gogoma",
+            "district": "Vahun",
+            "warring_faction": "ULIMO",
+            "date": "1993",
+            "casualties": "75"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.24786, 8.23688]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Kpolokpala",
+            "district": "Jorquelleh",
+            "warring_faction": "LPC",
+            "date": "1994",
+            "casualties": "750 +"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.24786, 8.23688]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Naama",
+            "district": "Zota",
+            "warring_faction": "ULIMO-K",
+            "date": "1994",
+            "casualties": "1000"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.43281, 7.259229]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gweyea",
+            "district": "Zota",
+            "warring_faction": "NPFL",
+            "date": "1994",
+            "casualties": "500"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.329092, 7.233281]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Jorquelleh",
+            "district": "Folonailah",
+            "warring_faction": "NPFL",
+            "date": "1994",
+            "casualties": "100"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.492458, 7.180906]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Phebe Hospital",
+            "district": "Suakoko",
+            "warring_faction": "NPFL",
+            "date": "1994",
+            "casualties": "100+"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.55324, 7.02482]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gbonota",
+            "district": "Sanoyea",
+            "warring_faction": "NPFL",
+            "date": "1994",
+            "casualties": "50+"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.78175, 7.10897]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gbongyea",
+            "district": "Sanoyea",
+            "warring_faction": "NPFL",
+            "date": "1994",
+            "casualties": "125"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.79305, 7.11236]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Cestos City",
+            "district": "Timbo",
+            "warring_faction": "NPFL",
+            "date": "1990",
+            "casualties": "6"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.58115, 5.45409]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Barkey",
+            "district": "Central C",
+            "warring_faction": "LPC",
+            "date": "1995",
+            "casualties": "75"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.499, 5.664]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Garpue",
+            "district": "Central C",
+            "warring_faction": "LPC",
+            "date": "1995",
+            "casualties": "75"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.56155, 5.51576]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Garpue",
+            "district": "Central C",
+            "warring_faction": "LPC",
+            "date": "1995",
+            "casualties": "75"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.56155, 5.51576]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Zammie",
+            "district": "Central C",
+            "warring_faction": "NPFL",
+            "date": "1995",
+            "casualties": "75"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.56155, 5.51576]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gbardiah",
+            "district": "Central C",
+            "warring_faction": "NPFL",
+            "date": "1995",
+            "casualties": "60"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.81153, 5.72095]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gborwuzohn",
+            "district": "Central C",
+            "warring_faction": "NPFL",
+            "date": "1995",
+            "casualties": "64"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.249437, 5.566513]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Sahn",
+            "district": "Central C",
+            "warring_faction": "NPFL",
+            "date": "1994",
+            "casualties": "9"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.25025, 5.92068]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Zeogar",
+            "district": "Central C",
+            "warring_faction": "NPFL",
+            "date": "1994",
+            "casualties": "18"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.85366, 6.10527]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Boe",
+            "district": "Moweh",
+            "warring_faction": "LPC", 
+            "date": "1994",
+            "casualties": "100"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-10.84206, 6.65101]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Paye",
+            "district": "Moweh",
+            "warring_faction": "LPC", 
+            "date": "1994",
+            "casualties": "10"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.94724, 5.91536]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Karngbo",
+            "district": "Moweh",
+            "warring_faction": "LPC", 
+            "date": "1994",
+            "casualties": "13"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-9.73599, 6.51412]
+          }
+        }
+
+    ]                  
+  }
+  

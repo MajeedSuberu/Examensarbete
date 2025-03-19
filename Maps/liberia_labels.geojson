@@ -1,0 +1,16 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Liberia"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-9.4295, 6.4281]
+        }
+      }
+    ]
+  }
+  
