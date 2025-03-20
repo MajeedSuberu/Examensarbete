@@ -191,7 +191,7 @@ map.on('load', function () {
     // 🟢 Lägg till Liberia-label
     map.addSource('liberia-label', {
         type: 'geojson',
-        data: 'liberia_labels.geojson'
+        data: 'liberia-county-boundary.geojson'
     });
 
     map.addLayer({
@@ -211,6 +211,26 @@ map.on('load', function () {
             'text-halo-width': 2
         }
     });
+
+    // 🟢 Ladda in Liberia counties från GeoJSON
+map.addSource('liberia-boundary', {
+    type: 'geojson',
+    data: 'liberia-county-boundary.geojson'
+});
+
+// 🟢 Lägg till ett lager som markerar Liberia och ger det en tydlig färg
+map.addLayer({
+    id: 'liberia-highlight',
+    type: 'fill',
+    source: 'liberia-boundary',
+    layout: {},
+    paint: {
+        'fill-color': '#A0A0A0',  // Ljusare grå för Liberia
+        'fill-opacity': 0.2,  // Ökar genomskinligheten
+        'fill-outline-color': '#B0B0B0' // Ljusare kantlinje
+    }
+    
+});
 
     // 🟢 Flytta Liberia-label över andra lager
     map.moveLayer('liberia-label', 'clusters');
@@ -254,3 +274,139 @@ function closeSidebar() {
     sidebar.classList.remove('open');
 }
 
+// 🟢 Hämta referenser till filtreringsfält
+const factionSelect = document.getElementById("faction-select");
+const cityInput = document.getElementById("city-input");
+const countySelect = document.getElementById("county-select");
+const timeline = document.getElementById("timeline");
+const casualtiesMin = document.getElementById("casualties-input");
+const casualtiesMax = document.getElementById("casualties-max-input");
+
+// 🟢 Lyssna på förändringar i filtren
+factionSelect.addEventListener("change", applyFilters);
+cityInput.addEventListener("input", applyFilters);
+countySelect.addEventListener("change", applyFilters);
+timeline.addEventListener("input", applyFilters);
+casualtiesMin.addEventListener("input", applyFilters);
+casualtiesMax.addEventListener("input", applyFilters);
+
+function applyFilters() {
+    let filters = ["all"]; // Starta med att inkludera allt
+
+    let selectedFaction = factionSelect.value;
+    let selectedCity = cityInput.value.toLowerCase();
+    let selectedCounty = countySelect.value;
+    let selectedYear = timeline.value;
+    let minCasualties = casualtiesMin.value ? parseInt(casualtiesMin.value) : null;
+    let maxCasualties = casualtiesMax.value ? parseInt(casualtiesMax.value) : null;
+
+    // 🟢 Filtrera på Warring Faction
+    if (selectedFaction !== "ALL") {
+        filters.push(["==", ["get", "warring_faction"], selectedFaction]);
+    }
+
+    // 🟢 Filtrera på Stad (Name-fält)
+    if (selectedCity) {
+        filters.push(["match", ["downcase", ["get", "name"]], selectedCity, true, false]);
+    }
+
+    // 🟢 Filtrera på County
+    if (selectedCounty !== "ALL") {
+        filters.push(["==", ["get", "county"], selectedCounty]);
+    }
+
+    // 🟢 Filtrera på Årtal
+    if (selectedYear) {
+        filters.push(["==", ["get", "date"], selectedYear]);
+    }
+
+    // 🟢 Filtrera på Antal Döda
+    if (minCasualties !== null || maxCasualties !== null) {
+        let casualtiesFilter = ["all"];
+        if (minCasualties !== null) {
+            casualtiesFilter.push([">=", ["get", "casualties"], minCasualties]);
+        }
+        if (maxCasualties !== null) {
+            casualtiesFilter.push(["<=", ["get", "casualties"], maxCasualties]);
+        }
+        filters.push(casualtiesFilter);
+    }
+
+    // 🟢 Sätt filter på kartlagret
+    map.setFilter("unclustered-point", filters);
+}
+
+// 🟢 Återställ filter
+function resetFilters() {
+    factionSelect.value = "ALL";
+    cityInput.value = "";
+    countySelect.value = "ALL";
+    timeline.value = "1990";
+    casualtiesMin.value = "";
+    casualtiesMax.value = "";
+    applyFilters();
+}
+
+function loadCounties() {
+    fetch("markers.geojson")
+        .then(response => response.json())
+        .then(data => {
+            let counties = new Set();
+
+            data.features.forEach(feature => {
+                if (feature.properties.county) {
+                    counties.add(feature.properties.county);
+                }
+            });
+
+            counties = Array.from(counties).sort();
+            counties.forEach(county => {
+                let option = document.createElement("option");
+                option.value = county;
+                option.textContent = county;
+                countySelect.appendChild(option);
+            });
+        })
+        .catch(error => console.error("Fel vid laddning av counties:", error));
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // 🟢 Hantera filtreringsmenyns hopfällning
+    const filterContainer = document.getElementById('filter-container');
+    const filterToggle = document.getElementById('toggle-filters');
+    const filters = document.getElementById('filters');
+
+    filterToggle.addEventListener('click', function () {
+        filters.classList.toggle('hidden');
+        filterToggle.textContent = filters.classList.contains('hidden') ? "Filter ⏵" : "Filter ⏷";
+    });
+
+    // 🟢 Funktion för att filtrera markörer
+    function filterMarkers(faction) {
+        console.log("Filtrerar på:", faction);
+        if (faction === 'ALL') {
+            console.log("Visar alla punkter");
+            map.setFilter('unclustered-point', null); 
+        } else {
+            map.setFilter('unclustered-point', ['==', ['get', 'warring_faction'], faction]);
+        }
+    }
+
+    // 🟢 Stäng sidopanel
+    function closeSidebar() {
+        document.getElementById('sidebar').classList.remove('open');
+    }
+
+    // 🟢 Lägg till event listeners för filterknappar
+    document.querySelectorAll("#filters button").forEach(button => {
+        button.addEventListener("click", () => {
+            document.querySelectorAll("#filters button").forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+            filterMarkers(button.textContent.trim());
+        });
+    });
+});
+
+
+// Kör när sidan laddas
+document.addEventListener("DOMContentLoaded", loadCounties);

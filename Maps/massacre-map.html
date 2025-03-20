@@ -20,6 +20,25 @@
         <p>Valt år: <span id="selectedYear">1990</span></p>
     </div>
 
+
+        <select id="faction-select">
+            <option value="ALL">Visa alla</option>
+            <option value="NPFL">NPFL</option>
+            <option value="ULIMO-K">ULIMO-K</option>
+            <option value="LURD">LURD</option>
+            <option value="ULIMO">ULIMO</option>
+            <option value="ULIMO-J">ULIMO-J</option>
+            <option value="INPFL">INPFL</option>
+            <option value="LPC">LPC</option>
+            <option value="GOL">GOL</option>
+        </select>
+    
+
+    
+    
+        <button onclick="resetFilters()">Återställ filter</button>
+    </div>
+
     <!-- Overlay med introduktion -->
     <div id="overlay">
         <div id="overlay-content">
@@ -31,11 +50,6 @@
         </div>
     </div>
 
-    <!-- Info-ruta om kartan -->
-    <div id="map-info">
-        <h2>Welcome to the Liberia Massacre Map</h2>
-        <p>This interactive map visualizes key events from Liberia’s turbulent history.</p>
-    </div>
 
     <!-- Själva kartan -->
     <div id="map"></div>
@@ -84,16 +98,20 @@
     </div>
 
     <!-- Filter-knappar -->
-    <div id="filters">
-        <button onclick="filterMarkers('NPFL')">NPFL</button>
-        <button onclick="filterMarkers('ULIMO-K')">ULIMO-K</button>
-        <button onclick="filterMarkers('LURD')">LURD</button>
-        <button onclick="filterMarkers('ULIMO')">ULIMO</button>
-        <button onclick="filterMarkers('ULIMO-J')">ULIMO-J</button>
-        <button onclick="filterMarkers('INPFL')">INPFL</button>
-        <button onclick="filterMarkers('LPC')">LPC</button>
-        <button onclick="filterMarkers('GOL')">GOL</button>
-        <button onclick="filterMarkers('ALL')">Visa alla</button>
+    <!-- 🟢 Hopfällbar filtreringsmeny -->
+    <div id="filter-container">
+        <button id="toggle-filters">Filter ⏷</button>
+        <div id="filters">
+            <button onclick="filterMarkers('NPFL')">NPFL</button>
+            <button onclick="filterMarkers('ULIMO-K')">ULIMO-K</button>
+            <button onclick="filterMarkers('LURD')">LURD</button>
+            <button onclick="filterMarkers('ULIMO')">ULIMO</button>
+            <button onclick="filterMarkers('ULIMO-J')">ULIMO-J</button>
+            <button onclick="filterMarkers('INPFL')">INPFL</button>
+            <button onclick="filterMarkers('LPC')">LPC</button>
+            <button onclick="filterMarkers('GOL')">GOL</button>
+            <button onclick="filterMarkers('ALL')">Visa alla</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
