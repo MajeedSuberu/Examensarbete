@@ -1,120 +1,111 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interaktiv karta över Liberia</title>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interaktiv karta över Liberia</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 </head>
-
 <body>
+  <!-- Info-knapp -->
+  <button id="info-button">ℹ️</button>
 
-    <!-- Timeline slider -->
-    <div id="timeline-container">
-        <input type="range" id="timeline" min="1979" max="2003" step="1" value="1990">
-        <p>Valt år: <span id="selectedYear">1990</span></p>
+  <!-- Info-popup -->
+  <div id="info-popup" class="hidden">
+    <div id="info-content">
+      <h2>About this map</h2>
+      <p>This interactive map visualizes documented massacres during Liberia's civil wars.
+      You can filter by warring factions, use the timeline to see changes over time, and click on markers to get more details.</p>
+      <p>Use the legend and filters to explore further.</p>
+      <button id="close-info">Close</button>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div id="timeline-container">
+    <input type="range" id="timeline" min="1979" max="2003" step="1" value="1990">
+    <p>Valt år: <span id="selectedYear">1990</span></p>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay">
+    <div id="overlay-content">
+      <h1>Liberia Massacre Map</h1>
+      <p>Explore documented war crimes and massacres during the Liberian Civil War.</p>
+      <p>This map documents known massacre sites and warring factions between 1979–2003. Click on a marker to learn more or use the filters to explore specific factions.</p>
+      <button onclick="closeOverlay()">Start Exploring</button>
+      <label><input type="checkbox" id="dontShowAgain"> Don't show this again</label>
+    </div>
+  </div>
+
+  <!-- Karta -->
+  <div id="map"></div>
+
+  <!-- Sidopanel -->
+  <div id="sidebar">
+    <h2>Massacre Details</h2>
+    <div id="sidebar-content">
+      <p>Klicka på en markör för att se detaljer.</p>
+    </div>
+    <button onclick="closeSidebar()">Close</button>
+  </div>
+
+  
+    <!-- Legend -->
+    <div id="legend" class="panel-style">
+      <h3>Warring Factions</h3>
+      <ul>
+        <li><span style="background-color: #ff6666;"></span> NPFL</li>
+        <li><span style="background-color: #6666ff;"></span> ULIMO-K</li>
+        <li><span style="background-color: #66cc66;"></span> LURD</li>
+        <li><span style="background-color: #cc66cc;"></span> ULIMO</li>
+        <li><span style="background-color: #ffcc66;"></span> ULIMO-J</li>
+        <li><span style="background-color: #999999;"></span> INPFL</li>
+        <li><span style="background-color: #ffff66;"></span> LPC</li>
+        <li><span style="background-color: #996633;"></span> GOL</li>
+      </ul>
     </div>
 
-
-        <select id="faction-select">
-            <option value="ALL">Visa alla</option>
-            <option value="NPFL">NPFL</option>
-            <option value="ULIMO-K">ULIMO-K</option>
-            <option value="LURD">LURD</option>
-            <option value="ULIMO">ULIMO</option>
-            <option value="ULIMO-J">ULIMO-J</option>
-            <option value="INPFL">INPFL</option>
-            <option value="LPC">LPC</option>
-            <option value="GOL">GOL</option>
-        </select>
-    
-
-    
-    
-        <button onclick="resetFilters()">Återställ filter</button>
+  
+<!-- Fraktionsfilter -->
+<!-- Faction Filter -->
+<div id="faction-filters" class="panel-style">
+    <button onclick="toggleFactionFilters()">
+      Filter by Faction <span id="faction-arrow">▼</span>
+    </button>
+    <div id="filter-options" class="hidden">
+      <button onclick="filterMarkers('NPFL')">NPFL</button>
+      <button onclick="filterMarkers('ULIMO-K')">ULIMO-K</button>
+      <button onclick="filterMarkers('LURD')">LURD</button>
+      <button onclick="filterMarkers('ULIMO')">ULIMO</button>
+      <button onclick="filterMarkers('ULIMO-J')">ULIMO-J</button>
+      <button onclick="filterMarkers('INPFL')">INPFL</button>
+      <button onclick="filterMarkers('LPC')">LPC</button>
+      <button onclick="filterMarkers('GOL')">GOL</button>
+      <button onclick="filterMarkers('ALL')">Visa alla</button>
     </div>
-
-    <!-- Overlay med introduktion -->
-    <div id="overlay">
-        <div id="overlay-content">
-            <h1>Liberia Massacre Map</h1>
-            <p>Explore documented war crimes and massacres during the Liberian Civil War.</p>
-            <p>This map documents known massacre sites and warring factions between 1979–2003. Click on a marker to learn more or use the filters to explore specific factions.</p>
-            <button onclick="closeOverlay()">Start Exploring</button>
-            <label><input type="checkbox" id="dontShowAgain"> Don't show this again</label>
-        </div>
+  </div>
+  
+  <!-- County Filter -->
+  <div id="county-filters" class="panel-style">
+    <button onclick="toggleCountyFilters()">
+      Filter by County <span id="county-arrow">▼</span>
+    </button>
+    <div id="county-filter-options" class="hidden">
+      <button onclick="filterByCounty('Bomi')">Bomi</button>
+      <button onclick="filterByCounty('Bong')">Bong</button>
+      <button onclick="filterByCounty('Grand Bassa')">Grand Bassa</button>
+      <button onclick="filterByCounty('River Cess')">River Cess</button>
+      <button onclick="filterByCounty('Lofa')">Lofa</button>
+      <button onclick="filterByCounty('ALL')">Visa alla</button>
     </div>
+  </div>
+  
+  
 
 
-    <!-- Själva kartan -->
-    <div id="map"></div>
-
-    <!-- Sidebar -->
-    <div id="sidebar">
-        <h2>Massacre Details</h2>
-        <div id="sidebar-content">
-            <p>Klicka på en markör för att se detaljer.</p>
-        </div>
-        <button onclick="closeSidebar()">Close</button>
-    </div>
-
-    <!-- Legenden -->
-    <div id="legend">
-        <h3>Warring Factions</h3>
-        <ul>
-            <li onmouseover="highlightFaction('NPFL')" onmouseout="resetHighlight()">
-                <span style="background-color: #ff0000;"></span> NPFL – National Patriotic Front of Liberia
-            </li>
-            <li onmouseover="highlightFaction('ULIMO-K')" onmouseout="resetHighlight()">
-                <span style="background-color: #0000ff;"></span> ULIMO-K – United Liberation Movement for Democracy (Kromah)
-            </li>
-            <li onmouseover="highlightFaction('LURD')" onmouseout="resetHighlight()">
-                <span style="background-color: #008000;"></span> LURD – Liberians United for Reconciliation and Democracy
-            </li>
-            <li onmouseover="highlightFaction('ULIMO')" onmouseout="resetHighlight()">
-                <span style="background-color: #800080;"></span> ULIMO – United Liberation Movement for Democracy
-            </li>
-            <li onmouseover="highlightFaction('ULIMO-J')" onmouseout="resetHighlight()">
-                <span style="background-color: #ff9900;"></span> ULIMO-J – United Liberation Movement for Democracy (Johnson)
-            </li>
-            <li onmouseover="highlightFaction('INPFL')" onmouseout="resetHighlight()">
-                <span style="background-color: #444444;"></span> INPFL – Independent National Patriotic Front of Liberia
-            </li>
-            <li onmouseover="highlightFaction('LPC')" onmouseout="resetHighlight()">
-                <span style="background-color: #ffd700;"></span> LPC – Liberia Peace Council
-            </li>
-            <li onmouseover="highlightFaction('GOL')" onmouseout="resetHighlight()">
-                <span style="background-color: #8B4513;"></span> GOL – Government of Liberia
-            </li>
-            <li>
-                <button onclick="filterMarkers('ALL')">Visa alla</button>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Filter-knappar -->
-    <!-- 🟢 Hopfällbar filtreringsmeny -->
-    <div id="filter-container">
-        <button id="toggle-filters">Filter ⏷</button>
-        <div id="filters">
-            <button onclick="filterMarkers('NPFL')">NPFL</button>
-            <button onclick="filterMarkers('ULIMO-K')">ULIMO-K</button>
-            <button onclick="filterMarkers('LURD')">LURD</button>
-            <button onclick="filterMarkers('ULIMO')">ULIMO</button>
-            <button onclick="filterMarkers('ULIMO-J')">ULIMO-J</button>
-            <button onclick="filterMarkers('INPFL')">INPFL</button>
-            <button onclick="filterMarkers('LPC')">LPC</button>
-            <button onclick="filterMarkers('GOL')">GOL</button>
-            <button onclick="filterMarkers('ALL')">Visa alla</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>

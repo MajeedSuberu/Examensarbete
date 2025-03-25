@@ -631,7 +631,7 @@
           "name": "Juu Town",
           "district": "River Cess",
           "warring_faction": "LPC",
-          "county": "River Cess "
+          "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1358,7 +1358,8 @@
             "district": "Kolahun",
             "warring_faction": "GOL",
             "date": "2002",
-            "casualties": "100"
+            "casualties": "100",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1372,7 +1373,8 @@
             "district": "Kolahun",
             "warring_faction": "GOL",
             "date": "2002",
-            "casualties": "100"
+            "casualties": "100",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1386,7 +1388,8 @@
             "district": "Kolahun",
             "warring_faction": "GOL",
             "date": "2002",
-            "casualties": "100"
+            "casualties": "100",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1400,7 +1403,8 @@
             "district": "Kolahun",
             "warring_faction": "ULIMO",
             "date": "1993",
-            "casualties": "36"
+            "casualties": "36",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1414,7 +1418,8 @@
             "district": "Kolahun",
             "warring_faction": "GOL",
             "date": "2002",
-            "casualties": "147"
+            "casualties": "147",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1428,7 +1433,8 @@
             "district": "Kolahun",
             "warring_faction": "ULIMO",
             "date": "2002",
-            "casualties": "300"
+            "casualties": "300",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1442,7 +1448,8 @@
             "district": "Foya",
             "warring_faction": "ULIMO",
             "date": "1993",
-            "casualties": "45"
+            "casualties": "45",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1456,7 +1463,8 @@
             "district": "Foya",
             "warring_faction": "NPFL",
             "date": "27",
-            "casualties": "45"
+            "casualties": "45",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1470,7 +1478,8 @@
             "district": "Vahun",
             "warring_faction": "ULIMO",
             "date": "1993",
-            "casualties": "130"
+            "casualties": "130",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1484,7 +1493,8 @@
             "district": "Vahun",
             "warring_faction": "ULIMO",
             "date": "1993",
-            "casualties": "75"
+            "casualties": "75",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1498,7 +1508,8 @@
             "district": "Vahun",
             "warring_faction": "ULIMO",
             "date": "1993",
-            "casualties": "75"
+            "casualties": "75",
+            "county": "Lofa"
           },
           "geometry": {
             "type": "Point",
@@ -1512,7 +1523,8 @@
             "district": "Jorquelleh",
             "warring_faction": "LPC",
             "date": "1994",
-            "casualties": "750 +"
+            "casualties": "750",
+            "county": "Bong"
           },
           "geometry": {
             "type": "Point",
@@ -1526,7 +1538,8 @@
             "district": "Zota",
             "warring_faction": "ULIMO-K",
             "date": "1994",
-            "casualties": "1000"
+            "casualties": "1000",
+            "county": "Bong"
           },
           "geometry": {
             "type": "Point",
@@ -1540,7 +1553,8 @@
             "district": "Zota",
             "warring_faction": "NPFL",
             "date": "1994",
-            "casualties": "500"
+            "casualties": "500",
+            "county": "Bong"
           },
           "geometry": {
             "type": "Point",
@@ -1554,7 +1568,8 @@
             "district": "Folonailah",
             "warring_faction": "NPFL",
             "date": "1994",
-            "casualties": "100"
+            "casualties": "100",
+            "county": "Bong"
           },
           "geometry": {
             "type": "Point",
@@ -1568,7 +1583,8 @@
             "district": "Suakoko",
             "warring_faction": "NPFL",
             "date": "1994",
-            "casualties": "100+"
+            "casualties": "100",
+            "county": "Bong"
           },
           "geometry": {
             "type": "Point",
@@ -1582,7 +1598,8 @@
             "district": "Sanoyea",
             "warring_faction": "NPFL",
             "date": "1994",
-            "casualties": "50+"
+            "casualties": "50",
+            "county": "Bong"
           },
           "geometry": {
             "type": "Point",
@@ -1596,7 +1613,8 @@
             "district": "Sanoyea",
             "warring_faction": "NPFL",
             "date": "1994",
-            "casualties": "125"
+            "casualties": "125",
+            "county": "Bong"
           },
           "geometry": {
             "type": "Point",
@@ -1610,7 +1628,8 @@
             "district": "Timbo",
             "warring_faction": "NPFL",
             "date": "1990",
-            "casualties": "6"
+            "casualties": "6",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1624,7 +1643,8 @@
             "district": "Central C",
             "warring_faction": "LPC",
             "date": "1995",
-            "casualties": "75"
+            "casualties": "75",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1638,7 +1658,8 @@
             "district": "Central C",
             "warring_faction": "LPC",
             "date": "1995",
-            "casualties": "75"
+            "casualties": "75",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1652,7 +1673,8 @@
             "district": "Central C",
             "warring_faction": "LPC",
             "date": "1995",
-            "casualties": "75"
+            "casualties": "75",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1666,7 +1688,8 @@
             "district": "Central C",
             "warring_faction": "NPFL",
             "date": "1995",
-            "casualties": "75"
+            "casualties": "75",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1680,7 +1703,8 @@
             "district": "Central C",
             "warring_faction": "NPFL",
             "date": "1995",
-            "casualties": "60"
+            "casualties": "60",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1694,7 +1718,8 @@
             "district": "Central C",
             "warring_faction": "NPFL",
             "date": "1995",
-            "casualties": "64"
+            "casualties": "64",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1708,7 +1733,8 @@
             "district": "Central C",
             "warring_faction": "NPFL",
             "date": "1994",
-            "casualties": "9"
+            "casualties": "9",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1722,7 +1748,8 @@
             "district": "Central C",
             "warring_faction": "NPFL",
             "date": "1994",
-            "casualties": "18"
+            "casualties": "18",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1736,7 +1763,8 @@
             "district": "Moweh",
             "warring_faction": "LPC", 
             "date": "1994",
-            "casualties": "100"
+            "casualties": "100",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1750,7 +1778,8 @@
             "district": "Moweh",
             "warring_faction": "LPC", 
             "date": "1994",
-            "casualties": "10"
+            "casualties": "10",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
@@ -1764,7 +1793,8 @@
             "district": "Moweh",
             "warring_faction": "LPC", 
             "date": "1994",
-            "casualties": "13"
+            "casualties": "13",
+            "county": "River Cess"
           },
           "geometry": {
             "type": "Point",
