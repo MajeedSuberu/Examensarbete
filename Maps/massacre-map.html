@@ -9,8 +9,52 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 </head>
 <body>
+
+    <div id="onboardingOverlay" class="overlay hidden">
+        <div class="overlay-content">
+          <div class="slide" data-slide="0">
+            <h2>Välkommen!</h2>
+            <p>Den här kartan visar massakrer under Liberias inbördeskrig.</p>
+          </div>
+          <div class="slide hidden" data-slide="1">
+            <h2>Filtrera innehåll</h2>
+            <p>Du kan filtrera händelser efter fraktioner och counties i menyn till vänster.</p>
+          </div>
+          <div class="slide hidden" data-slide="2">
+            <h2>Upptäck detaljer</h2>
+            <p>Klicka på en markör för att läsa mer om varje händelse. Du kan även använda tidslinjen.</p>
+          </div>
+          <div class="overlay-buttons">
+            <div class="navigation">
+              <button id="prevSlide" disabled>&larr; Tillbaka</button>
+              <button id="nextSlide">Nästa &rarr;</button>
+            </div>
+            <label>
+              <input type="checkbox" id="hideOverlayCheckbox" />
+              Visa inte detta igen
+            </label>
+            <button id="startExploringBtn" class="hidden">Start Exploring</button>
+          </div>
+        </div>
+      </div>
+
+      <button id="startStoryMode">Visa berättelsen</button>
+
+<div id="storyBox" class="hidden">
+  <p id="storyDate" class="story-date"></p>
+  <h3 id="storyLocation"></h3>
+  <p id="storyDescription"></p>
+  <button id="nextStory">Nästa</button>
+</div>
+      
+
+
+      <!-- Frågeteckensikon -->
+      <button id="helpIcon" class="help-icon">?</button>
+      
+
   <!-- Info-knapp -->
-  <button id="info-button">ℹ️</button>
+  <button id="infoBtn"></button>
 
   <!-- Info-popup -->
   <div id="info-popup" class="hidden">
@@ -24,10 +68,10 @@
   </div>
 
   <!-- Timeline -->
-  <div id="timeline-container">
+  <!-- <div id="timeline-container">
     <input type="range" id="timeline" min="1979" max="2003" step="1" value="1990">
     <p>Valt år: <span id="selectedYear">1990</span></p>
-  </div>
+  </div> -->
 
   <!-- Overlay -->
   <div id="overlay">
@@ -106,6 +150,8 @@
   
 
 
-  <script src="script.js"></script>
+
 </body>
+<script src="script.js"></script>
+
 </html>

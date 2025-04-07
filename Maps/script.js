@@ -2,6 +2,69 @@
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFqZWVkc3ViZXJ1IiwiYSI6ImNtNzFyeHI5aTAydmwyanIzMzY2ZzZpYXEifQ.Q5ZSoK62bL1NYKt-HEyDiw';
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('onboardingOverlay');
+    const slides = document.querySelectorAll('.slide');
+    const nextBtn = document.getElementById('nextSlide');
+    const prevBtn = document.getElementById('prevSlide');
+    const startBtn = document.getElementById('startExploringBtn');
+    const hideCheckbox = document.getElementById('hideOverlayCheckbox');
+    const helpIcon = document.getElementById('helpIcon');
+  
+    let currentSlide = 0;
+  
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('hidden', i !== index);
+      });
+      prevBtn.disabled = index === 0;
+      nextBtn.classList.toggle('hidden', index === slides.length - 1);
+      startBtn.classList.toggle('hidden', index !== slides.length - 1);
+    };
+  
+    const closeOverlay = () => {
+      if (hideCheckbox.checked) {
+        localStorage.setItem('hideOnboarding', 'true');
+      }
+      overlay.classList.add('hidden');
+    };
+  
+    // Start exploring button
+    startBtn.addEventListener('click', closeOverlay);
+  
+    // Slide navigation
+    nextBtn.addEventListener('click', () => {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    });
+  
+    // Show overlay only if not hidden before
+    const shouldHide = localStorage.getItem('hideOnboarding');
+    if (!shouldHide) {
+      overlay.classList.remove('hidden');
+      showSlide(currentSlide);
+    }
+  
+    // Help icon shows overlay again
+    helpIcon.addEventListener('click', () => {
+      overlay.classList.remove('hidden');
+      currentSlide = 0;
+      showSlide(currentSlide);
+    });
+  });
+  
+
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/light-v10',
@@ -41,48 +104,6 @@ function filterByCounty(county) {
   applyFilters();
 }
 
-
-// Onboarding stegvis guide
-document.addEventListener("DOMContentLoaded", function () {
-  const steps = [
-    "This is a map documenting each massacre between 1979 - 2003.",
-    "Each dot represents a massacre and the warring faction behind it.",
-    "Click on a dot to get more information regarding the massacre."
-  ];
-
-  let currentStep = 0;
-  const stepContainer = document.getElementById("onboarding-step");
-  const stepText = document.getElementById("onboarding-text");
-  const nextBtn = document.getElementById("onboarding-next");
-  const skipBtn = document.getElementById("onboarding-skip");
-
-  function showStep(index) {
-    stepText.textContent = steps[index];
-    stepContainer.classList.remove("hidden");
-    stepContainer.classList.add("visible");
-  }
-
-  nextBtn.addEventListener("click", () => {
-    currentStep++;
-    if (currentStep < steps.length) {
-      showStep(currentStep);
-    } else {
-      stepContainer.classList.add("hidden");
-      stepContainer.classList.remove("visible");
-      localStorage.setItem("onboardingDone", "true");
-    }
-  });
-
-  skipBtn.addEventListener("click", () => {
-    stepContainer.classList.add("hidden");
-    stepContainer.classList.remove("visible");
-    localStorage.setItem("onboardingDone", "true");
-  });
-
-  if (!localStorage.getItem("onboardingDone")) {
-    showStep(currentStep);
-  }
-});
 
 map.on('load', () => {
   map.addSource('events', {
@@ -145,6 +166,53 @@ map.on('click', 'unclustered-point', (e) => {
     sidebar.classList.add("open");
   });
 
+  const storySteps = [
+    {
+      coords: [ -10.8, 6.3 ],
+      date: "Augusti 1990",
+      location: "Buchanan",
+      description: "NPFL attackerade staden. Minst 200 döda."
+    },
+    {
+      coords: [ -9.6, 7.0 ],
+      date: "Juni 1993",
+      location: "Gbarnga",
+      description: "ULIMO-K intog området. Många civila flydde."
+    },
+    {
+      coords: [ -10.0, 6.9 ],
+      date: "April 1996",
+      location: "Monrovia",
+      description: "Våldsam sammandrabbning mellan flera fraktioner."
+    }
+  ];
+  
+  
+  let currentStep = 0;
+  
+  const storyBtn = document.getElementById('startStoryMode');
+  const storyBox = document.getElementById('storyBox');
+  const storyText = document.getElementById('storyText');
+  const nextBtn = document.getElementById('nextStory');
+  
+  storyBtn.addEventListener('click', () => {
+    currentStep = 0;
+    storyBox.classList.remove('hidden');
+    storyText.textContent = storySteps[currentStep].text;
+    map.flyTo({ center: storySteps[currentStep].coords, zoom: 8 });
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    currentStep++;
+    if (currentStep < storySteps.length) {
+      storyText.textContent = storySteps[currentStep].text;
+      map.flyTo({ center: storySteps[currentStep].coords, zoom: 8 });
+    } else {
+      storyBox.classList.add('hidden');
+    }
+  });
+  
+
 
 
 // ========================
@@ -173,21 +241,13 @@ function toggleFilters() {
 }
 
 // Infopopup
-document.addEventListener("DOMContentLoaded", function () {
-  const infoBtn = document.getElementById("info-button");
-  const infoPopup = document.getElementById("info-popup");
-  const closeInfo = document.getElementById("close-info");
-
-  infoBtn.addEventListener("click", function () {
-    infoPopup.classList.toggle("visible");
-    infoPopup.classList.toggle("hidden");
+document.getElementById("infoBtn").addEventListener("click", function() {
+    document.getElementById("info-popup").classList.toggle("active"); // Toggles visibility
   });
-
-  closeInfo.addEventListener("click", function () {
-    infoPopup.classList.add("hidden");
-    infoPopup.classList.remove("visible");
+  
+  document.getElementById("close-info").addEventListener("click", function() {
+    document.getElementById("info-popup").classList.remove("active"); // Closes popup
   });
-});
 
 // Overlay
 function closeOverlay() {
