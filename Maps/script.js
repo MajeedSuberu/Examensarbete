@@ -112,6 +112,7 @@ map.on('load', () => {
     cluster: false
   });
 
+
   map.addLayer({
     id: 'unclustered-point',
     type: 'circle',
@@ -192,26 +193,57 @@ map.on('click', 'unclustered-point', (e) => {
   
   const storyBtn = document.getElementById('startStoryMode');
   const storyBox = document.getElementById('storyBox');
-  const storyText = document.getElementById('storyText');
-  const nextBtn = document.getElementById('nextStory');
+  const storyDate = document.getElementById('storyDate');
+  const storyLocation = document.getElementById('storyLocation');
+  const storyDescription = document.getElementById('storyDescription');
+  const nextStory = document.getElementById('nextStory');
+
+  function showStoryStep(step) {
+    const { coords, date, location, description } = step;
+
   
+    // Flytta kartan
+    map.flyTo({ center: coords, zoom: 8 });
+  
+    // Visa popup
+    new mapboxgl.Popup()
+      .setLngLat(coords)
+      .setHTML(`<strong>${location}</strong><br>${date}<br>${description}`)
+      .addTo(map);
+  
+    // Visa sidopanel
+    document.getElementById("sidebar-content").innerHTML = `
+      <p><strong>${location}</strong></p>
+      <p>Date: ${date}</p>
+      <p>${description}</p>
+    `;
+    document.getElementById("sidebar").classList.add("open");
+  
+    // Storybox
+    storyDate.textContent = date;
+    storyLocation.textContent = location;
+    storyDescription.textContent = description;
+    storyBox.classList.remove('hidden');
+  }
+
   storyBtn.addEventListener('click', () => {
     currentStep = 0;
-    storyBox.classList.remove('hidden');
-    storyText.textContent = storySteps[currentStep].text;
-    map.flyTo({ center: storySteps[currentStep].coords, zoom: 8 });
+    showStoryStep(storySteps[currentStep]);
   });
   
-  nextBtn.addEventListener('click', () => {
+  nextStory.addEventListener('click', () => {
     currentStep++;
     if (currentStep < storySteps.length) {
-      storyText.textContent = storySteps[currentStep].text;
-      map.flyTo({ center: storySteps[currentStep].coords, zoom: 8 });
+      showStoryStep(storySteps[currentStep]);
     } else {
       storyBox.classList.add('hidden');
+      document.getElementById("sidebar").classList.remove("open");
     }
   });
   
+  
+
+
 
 
 
@@ -220,18 +252,18 @@ map.on('click', 'unclustered-point', (e) => {
 // ========================
 
 // Få referens till select-elementet
-const countySelect = document.getElementById("county-select");
+// const countySelect = document.getElementById("county-select");
 
 // Lägg till en lyssnare för när användaren väljer ett county
-countySelect.addEventListener("change", function () {
-  const selectedCounty = this.value;
+// countySelect.addEventListener("change", function () {
+//  const selectedCounty = this.value;
 
-  if (selectedCounty === "ALL") {
-    map.setFilter("unclustered-point", null);
-  } else {
-    map.setFilter("unclustered-point", ["==", ["get", "county"], selectedCounty]);
-  }
-});
+ // if (selectedCounty === "ALL") {
+//    map.setFilter("unclustered-point", null);
+//  } else {
+//    map.setFilter("unclustered-point", ["==", ["get", "county"], selectedCounty]);
+ // }
+// });
 
 
 // Toggle filtermeny
@@ -290,4 +322,71 @@ function toggleFactionFilters() {
     countyOptions.classList.toggle('hidden');
     arrow.textContent = countyOptions.classList.contains('hidden') ? '▼' : '▲';
   }
+  
+  document.getElementById('closeDataOverlay').addEventListener('click', () => {
+    document.getElementById('dataOverlay').classList.add('hidden');
+  });
+  
+  function drawCasualtyChart() {
+    console.log("Ritar cirkeldiagrammet");
+    const canvas = document.getElementById("casualtyChart");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) {
+      console.error("Canvas context kunde inte hämtas.");
+      return;
+    }
+  
+    // Rensa tidigare innehåll
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+    const data = [
+      { label: "NPFL", value: 400, color: "#ff6666" },
+      { label: "ULIMO-K", value: 250, color: "#6666ff" },
+      { label: "LURD", value: 150, color: "#66cc66" },
+      { label: "ULIMO", value: 100, color: "#cc66cc" },
+    ];
+  
+    const total = data.reduce((sum, d) => sum + d.value, 0);
+    let startAngle = 0;
+  
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = Math.min(centerX, centerY) - 10;
+  
+    data.forEach((segment) => {
+      const sliceAngle = (segment.value / total) * 2 * Math.PI;
+      const midAngle = startAngle + sliceAngle / 2;
+  
+      // Rita sektorn
+      ctx.beginPath();
+      ctx.moveTo(centerX, centerY);
+      ctx.arc(centerX, centerY, radius, startAngle, startAngle + sliceAngle);
+      ctx.closePath();
+      ctx.fillStyle = segment.color;
+      ctx.fill();
+  
+      // Textplacering
+      const labelX = centerX + Math.cos(midAngle) * (radius * 0.6);
+      const labelY = centerY + Math.sin(midAngle) * (radius * 0.6);
+  
+      // Etikett
+      ctx.fillStyle = "black";
+      ctx.font = "bold 14px Helvetica, sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(`${segment.label} – ${segment.value}`, labelX, labelY);
+  
+      startAngle += sliceAngle;
+    });
+  }
+  
+  // Kör funktionen varje gång overlayen öppnas
+  document.getElementById('dataIcon').addEventListener('click', () => {
+    document.getElementById('dataOverlay').classList.remove('hidden');
+    drawCasualtyChart();
+  });
+  
+   
+  
   

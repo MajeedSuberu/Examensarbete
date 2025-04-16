@@ -154,6 +154,39 @@ body {
     to { opacity: 1; transform: translateY(0); }
   }
   
+  #pulse-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1) translate(-50%, -50%);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5) translate(-50%, -50%);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1) translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
+
 
   #map {
     position: absolute;
@@ -550,9 +583,62 @@ body {
     background-color: #ddd;
   }
 
- 
-
+  .data-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* ⬅ flyttar den till vänster */
+    background-color: rgba(255,255,255,0.9);
+    color: #000;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer; /* 🔥 gör muspekaren till en hand */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 1001; /* 👈 läggs ovanpå legenden */
+  }
   
+  
+  #dataOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.9);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  #dataOverlay.hidden {
+    display: none;
+  }
+  
+  #dataOverlay .overlay-content {
+    background: rgba(30, 30, 30, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 0 4px 30px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    text-align: center;
+  }
+  
+  #casualtyChart {
+    background-color: white; /* tillfälligt för debug */
+    display: block;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    }
+    
 
 
   

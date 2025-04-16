@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2S49MHYW9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2S49MHYW9G');
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Interaktiv karta över Liberia</title>
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -67,8 +77,8 @@
     </div>
   </div>
 
-  <!-- Timeline -->
-  <!-- <div id="timeline-container">
+   Timeline 
+  <div id="timeline-container">
     <input type="range" id="timeline" min="1979" max="2003" step="1" value="1990">
     <p>Valt år: <span id="selectedYear">1990</span></p>
   </div> -->
@@ -87,6 +97,8 @@
   <!-- Karta -->
   <div id="map"></div>
 
+  <div id="pulse-marker" class="hidden"></div>
+
   <!-- Sidopanel -->
   <div id="sidebar">
     <h2>Massacre Details</h2>
@@ -96,7 +108,7 @@
     <button onclick="closeSidebar()">Close</button>
   </div>
 
-  
+
     <!-- Legend -->
     <div id="legend" class="panel-style">
       <h3>Warring Factions</h3>
@@ -149,9 +161,19 @@
   
   
 
+<!-- War in Data Icon -->
+<button id="dataIcon" class="data-icon">📊</button>
 
+<!-- Overlay -->
+<div id="dataOverlay" class="hidden">
+  <div class="overlay-content">
+    <h2>The War in Data</h2>
+    <p>Här kommer visualiseringar med siffror om konflikten.</p>
+    <canvas id="casualtyChart" width="300" height="300"></canvas>
+    <button id="closeDataOverlay">Stäng</button>
+  </div>
+</div>
 
-</body>
 <script src="script.js"></script>
 
-</html>
+</body>
