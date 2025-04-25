@@ -95,13 +95,26 @@ function applyFilters() {
 function filterMarkers(faction) {
   selectedFaction = faction;
   applyFilters();
-}
 
+  // GA tracking – loggar vilket filter som används
+  gtag("event", "filter_faction", {
+    event_category: "Filter",
+    event_label: faction,
+    value: 1
+  });
+}
 
 
 function filterByCounty(county) {
   selectedCounty = county;
   applyFilters();
+
+  // GA tracking – loggar vilket county som valts
+  gtag("event", "filter_county", {
+    event_category: "Filter",
+    event_label: county,
+    value: 1
+  });
 }
 
 
@@ -151,7 +164,14 @@ map.on('load', () => {
 });
 
 map.on('click', 'unclustered-point', (e) => {
-    const props = e.features[0].properties;
+  const props = e.features[0].properties;
+
+  // GA tracking – loggar vilken markör som klickats
+  gtag("event", "marker_click", {
+    event_category: "Map",
+    event_label: `${props.name} (${props.warring_faction})`,
+    value: props.casualties ? parseInt(props.casualties) : 0
+  });
   
     // Fyll innehållet i sidopanelen
     const sidebarContent = document.getElementById("sidebar-content");
@@ -385,6 +405,13 @@ function toggleFactionFilters() {
   document.getElementById('dataIcon').addEventListener('click', () => {
     document.getElementById('dataOverlay').classList.remove('hidden');
     drawCasualtyChart();
+  
+    // GA tracking – när användaren öppnar "The War in Data"
+    gtag("event", "open_data_overlay", {
+      event_category: "Overlay",
+      event_label: "The War in Data",
+      value: 1
+    });
   });
   
    
